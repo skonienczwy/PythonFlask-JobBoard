@@ -60,7 +60,7 @@ def employer(employer_id):
     return render_template('employer.html',employer=employer,jobs=jobs,reviews=reviews)
 
 @app.route('/employer/<emploeyr_id>/review', methods=('GET','POST'))
-def reviev(employer_id):
+def review(employer_id):
     if request.method == 'POST':
         review = request.form['review']
         rating = request.form['rating']
